@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Packet {
+  PacketType type = 1;
+  optional bytes data = 3;
+}
+
+enum PacketType {
+  TYPE_PING = 0;
+  TYPE_AUTH = 1;
+  TYPE_CLIPBOARDTEXT = 2;
+  TYPE_CLIPBOARDFILE = 3;
+}
